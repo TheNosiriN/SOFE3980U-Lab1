@@ -1,1 +1,1 @@
-mvn clean package
+mvn clean package site assembly:single
