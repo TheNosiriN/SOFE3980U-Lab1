@@ -118,4 +118,103 @@ public class BinaryTest
         Binary binary3=Binary.add(binary1,binary2);
         assertTrue( binary3.getValue().equals("0"));
     }
+    /**
+     * Test The or functions with two binary numbers of the same length
+     */
+    @Test
+    public void or()
+    {
+        Binary binary1=new Binary("1010100");
+        Binary binary2=new Binary("100110");
+        Binary binary3=Binary.or(binary1,binary2);
+        assertTrue( binary3.getValue().equals("1110110"));
+    }
+    /**
+     * Test The or functions with two binary numbers, the length of the first argument is greater than the second
+     */
+    @Test
+    public void or2()
+    {
+        Binary binary1=new Binary("10101");
+        Binary binary2=new Binary("11001");
+        Binary binary3=Binary.or(binary1,binary2);
+        assertTrue( binary3.getValue().equals("11101"));
+    }
+    /**
+     * Test The or functions with two binary numbers, the length of the first argument is less than the second
+     */
+    @Test
+    public void or3()
+    {
+        Binary binary1=new Binary("1100");
+        Binary binary2=new Binary("1010");
+        Binary binary3=Binary.or(binary1,binary2);
+        assertTrue( binary3.getValue().equals("1110"));
+    }
+    /**
+     * Test The and functions with two binary numbers of the same length
+     */
+    @Test
+    public void and()
+    {
+        Binary binary1=new Binary("1010100");
+        Binary binary2=new Binary("100110");
+        Binary binary3=Binary.and(binary1,binary2);
+        assertTrue( binary3.getValue().equals("100"));
+    }
+    /**
+     * Test The and functions with two binary numbers, the length of the first argument is greater than the second
+     */
+    @Test
+    public void and2()
+    {
+        Binary binary1=new Binary("10101");
+        Binary binary2=new Binary("11001");
+        Binary binary3=Binary.and(binary1,binary2);
+        assertTrue( binary3.getValue().equals("10001"));
+    }
+    /**
+     * Test The and functions with two binary numbers, the length of the first argument is less than the second
+     */
+    @Test
+    public void and3()
+    {
+        Binary binary1=new Binary("1100");
+        Binary binary2=new Binary("1010");
+        Binary binary3=Binary.and(binary1,binary2);
+        assertTrue( binary3.getValue().equals("1000"));
+    }
+    /**
+     * Test The multiply functions with two binary numbers of the same length
+     */
+    @Test
+    public void multiply()
+    {
+        Binary binary1=new Binary("1010100");
+        Binary binary2=new Binary("100110");
+        Binary binary3=Binary.multiply(binary1,binary2);
+        assertTrue( binary3.getValue().equals("110001111000"));
+    }
+    /**
+     * Test The multiply functions with two binary numbers, the length of the first argument is greater than the second
+     */
+    @Test
+    public void multiply2()
+    {
+        Binary binary1=new Binary("10101");
+        Binary binary2=new Binary("11001");
+        Binary binary3=Binary.multiply(binary1,binary2);
+        assertTrue( binary3.getValue().equals("1000001101"));
+    }
+    /**
+     * Test The multiply functions with two binary numbers, the length of the first argument is less than the second
+     */
+    @Test
+    public void multiply3()
+    {
+        Binary binary1=new Binary("1100");
+        Binary binary2=new Binary("1010");
+        Binary binary3=Binary.multiply(binary1,binary2);
+        assertTrue( binary3.getValue().equals("1111000"));
+    }
 }

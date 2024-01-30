@@ -20,9 +20,20 @@ public class App
         System.out.println("The current local time is: " + currentTime);
         Binary binary1=new Binary("00010001000");
         System.out.println( "First binary number is "+binary1.getValue());
+
         Binary binary2=new Binary("111000");
         System.out.println( "Second binary number is "+binary2.getValue());
-        Binary sum= Binary.add(binary1,binary2);
+
+        Binary sum = Binary.add(binary1,binary2);
         System.out.println( "Their summation is "+sum.getValue());
+
+        Binary bor = Binary.or(binary1,binary2);
+        System.out.println( "Their bitwise OR is "+bor.getValue());
+
+        Binary band = Binary.and(binary1,binary2);
+        System.out.println( "Their bitwise AND is "+band.getValue());
+
+        Binary mult = Binary.multiply(binary1,binary2);
+        System.out.println( "Their multiplication is "+mult.getValue());
     }
 }
